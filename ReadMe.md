@@ -21,7 +21,7 @@ You may need to restart your machine after installing .NET 8.0.
 
 1. Clone this repository to your local machine
 2. Open the solution in your preferred IDE (we recommend Visual Studio)
-3. If you would like to run the application you can do so by running the LibraryManagementConsole project from the command line (change directory to the project folder and run `dotnet run --project LibraryManagementConsole.csproj`), the application will prompt you with a list of commands you can run
+3. If you would like to run the application you can do so by running the LibraryManagementConsole project from the command line (change directory to the project folder and run `dotnet run`), the application will prompt you with a list of commands you can run
 4. To run the tests, open the test explorer in Visual Studio and run all tests, alternatively, you can run the tests from the command line by changing directory to the LibraryManagerConsoleTests project and running `dotnet test`
 
 ## Tasks
