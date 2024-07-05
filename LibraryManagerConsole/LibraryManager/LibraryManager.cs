@@ -33,27 +33,22 @@ namespace LibraryManagerConsole.LibraryManager
 
         public BookManagementResult AddBook(Book book)
         {
-            if (_books.Any(libraryBook => libraryBook.Title == libraryBook.Title && libraryBook.Author == book.Author && libraryBook.ReleaseYear == book.ReleaseYear && libraryBook.Edition == book.Edition))
+            if (_books.Any(libraryBook => libraryBook.Title == book.Title &&
+                    libraryBook.Author == book.Author &&
+                    libraryBook.ReleaseYear == book.ReleaseYear &&
+                    libraryBook.Edition == book.Edition))
             {
                 return new BookManagementResult($"{book} already exists", false);
             }
 
-            Book bookToAdd = new Book
+            Book bookToAdd = new()
             {
+                Id = _books.Count == 0 ? 1 : _books.Max(libraryBook => libraryBook.Id) + 1,
                 Title = book.Title,
                 Author = book.Author,
                 ReleaseYear = book.ReleaseYear,
                 Edition = book.Edition
             };
-
-            if (_books.Count == 0)
-            {
-                bookToAdd.Id = 1;
-            }
-            else
-            {
-                bookToAdd.Id = _books.Max(libraryBook => libraryBook.Id) + 1;
-            }
 
             _books.Add(bookToAdd);
 
