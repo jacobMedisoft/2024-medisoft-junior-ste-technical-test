@@ -28,7 +28,7 @@ You may need to restart your machine after installing .NET 8.0.
 
 In the LibraryManagerConsoleTests project there is a class called `LibraryManagerTests.cs`. This class contains a number of tests that are currently failing. Your tasks are to:
 
-1. Update the failing tests so that they pass
+1. Update the failing tests so that they pass. You should not need to change the implementation of the system to make the tests pass. Tests 4 and 5 may be more complex to resolve, do not worry about having an exact correct solution, we are more interested in how you approach the problem.
 2. Update test case 2 to be structured in the same Arrange/Act/Assert format as the other test cases
 3. Add an appropriate description for test case 3 to describe what the test is doing
 
